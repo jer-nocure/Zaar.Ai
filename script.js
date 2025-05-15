@@ -6,11 +6,11 @@ function processInput() {
     const userText = userInput.value.trim();
     if (userText === '') return;
 
-    // Display user message
+    // Tampilkan pesan pengguna
     displayMessage(userText, 'user');
     userInput.value = '';
 
-    // Get AI response after 1 second
+    // respons AI setelah 1 detik
     setTimeout(() => {
         const response = generateAIResponse(userText);
         displayMessage(response, 'ai');
@@ -22,7 +22,7 @@ function displayMessage(message, sender) {
     messageElement.classList.add('chat-message', sender);
     messageElement.textContent = message;
     chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to bottom
+    chatBox.scrollTop = chatBox.scrollHeight; // Gulir otomatis ke bawah
 }
 
     function generateAIResponse(input) {
